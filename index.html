@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Konnectik - Connecting Communities</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Konnectik! Connecting Communities. Empowering Cities. Join our journey."/>
+  <link rel="canonical" href="https://konnectik.com" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Konnectik – Connecting Communities" />
+  <meta property="og:description" content="Powering the future of connectivity in Cameroon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://konnectik.com" />
+  <meta property="og:image" content="static/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+  </noscript>
+
+  <!-- Preload hero (matches the <img>) -->
+  <link rel="preload" as="image"
+        href="assets/img/hero-bg-1280.png?v=3"
+        imagesrcset="assets/img/hero-bg-768.png?v=3 768w, assets/img/hero-bg-1280.png?v=3 1280w, assets/img/hero-bg-1920.png?v=3 1920w"
+        imagesizes="100vw"
+        fetchpriority="high">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=2025-08-14-3" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="nav">
+      <a class="logo" href="#home">
+        <img src="assets/img/konnectik-logo.svg" alt="Konnectik Logo" loading="eager" fetchpriority="high">
+        <strong>Konnectik</strong>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">☰ Menu</button>
+      <nav id="primary-nav" class="nav-links" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#invest" class="cta">Invest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero with <img> background and gradient overlay -->
+    <section id="home" class="reveal hero">
+      <picture aria-hidden="true" class="hero-media">
+        <source srcset="assets/img/hero-bg-1920.png?v=3" media="(min-width: 1280px)">
+        <img src="assets/img/hero-bg-1280.png?v=3" alt="" width="1920" height="1080" loading="eager">
+      </picture>
+      <div class="hero-overlay"></div>
+      <div class="container inner">
+        <h1>Powering the <span class="accent-strong">Future</span> of Connectivity in Cameroon</h1>
+        <p>We’re building a bold new network to connect underserved communities, drive economic growth, and bridge the digital divide.</p>
+        <div class="actions">
+          <a href="#invest" class="cta">Invest in Konnectik</a>
+          <a href="#about" class="cta cta--secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+   <section id="about" class="reveal">
+    <div class="container">
+    <article class="about-card surface">
+      <!-- LEFT: Tabs + copy -->
+      <div class="about-left" data-tabs>
+        <div class="tablist" role="tablist" aria-label="Why How What">
+          <button role="tab" aria-selected="true" aria-controls="panel-why"  id="tab-why"
+                  class="tab pill" data-img="assets/img/about-why.jpg">WHY</button>
+          <button role="tab" aria-selected="false" aria-controls="panel-how" id="tab-how"
+                  class="tab pill" data-img="assets/img/about-how.jpg">HOW</button>
+          <button role="tab" aria-selected="false" aria-controls="panel-what" id="tab-what"
+                  class="tab pill" data-img="assets/img/about-what.jpg">WHAT</button>
+        </div>
+
+        <div tabindex="0" role="tabpanel" id="panel-why"  aria-labelledby="tab-why"  class="tabpanel is-active"
+             data-img="assets/img/about-why.jpg">
+          <h2>About Us</h2>
+          <p><strong>Why now?</strong> Millions in Cameroon still lack reliable, affordable connectivity. This gap limits education, healthcare, and entrepreneurship. Our PoC in Douala proves a model that can scale.</p>
+          <p>A survey conducted with students in the PK17 residential zone revealed widespread dissatisfaction with existing data plans. Key needs raised were:</p>
+          <ul> 
+            <li>Speed</li>
+            <li>Affordability</li>
+            <li>Quantity</li>
+          </ul>
+          
+        </div>
+
+        <div tabindex="0" role="tabpanel" id="panel-how" aria-labelledby="tab-how" class="tabpanel"
+             data-img="assets/img/about-how.jpg">
+          <h2>How we solve it</h2>
+          <p><strong>Lean, modular radio networks + local partnerships + data-driven planning.</strong> We optimize coverage per franc, onboard communities, and keep pricing transparent.</p>
+          <p><strong>Delivering toseamless connectivity right to your hands.</strong></p>
+        </div>
+
+        <div tabindex="0" role="tabpanel" id="panel-what" aria-labelledby="tab-what" class="tabpanel"
+             data-img="assets/img/about-what.jpg">
+          <h2>What we’re building</h2>
+          <p><strong>A scalable connectivity platform</strong></p>
+          <p>Core infrastructure, last-mile access, and a simple mobile app for top-ups and support—designed to grow from neighborhood deployments to nationwide coverage.</p>
+          <p><strong>Our Founder</strong></p>
+          <p><strong>Karol Konarski</strong>, a visionary leader, reimagined the old model of cyber cafés into <strong>Cyber Wi-Fis</strong>: affordable, unlimited data bundles you can subscribe to straight from your phone and enjoy from the comfort of your home.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Illustration that follows the active tab -->
+      <figure class="about-figure">
+        <img id="about-illustration" src="assets/img/about-why.jpg" alt="">
+      </figure>
+    </article>
+  </div>
+</section>
+
+
+    <section id="coverage" class="reveal">
+      <div class="container">
+        <h2>Coverage (PoC Plan)</h2>
+        <div class="poc-grid">
+          <article class="poc-card">
+            <img src="assets/img/poc-phase1.png" alt="Phase 1">
+            <div class="poc-body">
+              <h3>Phase 1: PoC in Douala</h3>
+              <p>Validate tech and service model.</p>
+            </div>
+          </article>
+          <article class="poc-card">
+            <img src="assets/img/poc-phase2.png" alt="Phase 2">
+            <div class="poc-body">
+              <h3>Phase 2: Regional Expansion</h3>
+              <p>Scale to regional hubs.</p>
+            </div>
+          </article>
+          <article class="poc-card">
+            <img src="assets/img/poc-phase3.png" alt="Phase 3">
+            <div class="poc-body">
+              <h3>Phase 3: National Reach</h3>
+              <p>Nationwide coverage, underserved areas first.</p>
+            </div>
+          </article>
+        </div>
+        <a href="#invest" class="cta">Join Our Expansion Journey</a>
+      </div>
+    </section>
+
+    <section id="news" class="reveal">
+      <div class="container">
+        <h2>Latest News</h2>
+        <p>Stay informed on progress, partnerships, and key milestones as we advance towards launch.</p>
+
+        <!-- Netlify Forms setup -->
+        <form id="newsletter" class="surface" name="newsletter" method="post" data-netlify="true" netlify-honeypot="company_website" action="/thank-you">
+          <input type="hidden" name="form-name" value="newsletter">
+          <label for="newsletter-email">Sign up for investor updates:</label>
+          <input id="newsletter-email" name="email" type="email" placeholder="name@example.com" autocomplete="email" inputmode="email" required />
+          <p class="hp">
+            <label>Don’t fill this out if you're human: <input name="company_website" /></label>
+          </p>
+          <button type="submit" class="cta">Subscribe</button>
+          <p class="form-note">We’ll only email key milestones. <a href="/privacy">Privacy</a>.</p>
+          <p id="newsletter-status" role="status" aria-live="polite" class="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="apps" class="reveal apps">
+      <div class="container">
+        <div class="apps-wrap surface">
+          <div class="apps-copy">
+            <h2>Get the Konnectik App</h2>
+            <p>Manage account, buy data, get support.</p>
+            <div class="store-buttons">             
+              <a href="https://apple.com" class="store-btn appstore" aria-label="Download on the App Store">
+                <img src="assets/badges/app-store.png" alt="Download on the App Store" height="48">
+              </a>
+              <a href="https://play.google.com" class="store-btn playstore" aria-label="Get it on Google Play">
+                <img src="assets/badges/google-play.png" alt="Get it on Google Play" height="48">
+              </a>
+            </div>
+          </div>
+          <div class="apps-visual">
+            <img src="assets/img/app-iphone.png" alt="Konnectik app on iPhone" class="phone phone-left">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form" class="surface" name="contact" method="post" data-netlify="true" netlify-honeypot="company_website" action="/thank-you">
+          <input type="hidden" name="form-name" value="contact">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+
+          <label for="email">Your Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="general">General Inquiry</option>
+            <option value="investor">Investor Inquiry</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+
+          <p class="hp">
+            <label>Don’t fill this out if you're human: <input name="company_website" /></label>
+          </p>
+
+          <button type="submit" class="cta">Send</button>
+          <p id="contact-status" role="status" aria-live="polite" class="status"></p>
+        </form>
+        <div class="badge-row">
+          <a class="badge-link" href="https://wa.me/237653093701" target="_blank" rel="noopener">
+            <img src="assets/badges/whatsapp.png" alt="Chat on WhatsApp" height="48">
+          </a>
+          <a class="badge-link" href="mailto:konnectik@gmail.com?subject=Investor%20Relations">
+            <img src="assets/badges/email.png" alt="Email Investor Relations" height="48">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="invest" class="reveal">
+      <div class="container surface">
+        <h2>Invest in Konnectik</h2>
+        <p>Request our investor deck and learn more about the PoC, financial model, and rollout plan.</p>
+        <a href="mailto:konnectik@gmail.com?subject=Investor%20Deck%20Request" class="cta">Email Investor Relations</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Konnectik. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
