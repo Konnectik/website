@@ -297,7 +297,17 @@ header.scrolled {
 @media (max-width: 840px) {
   .nav-links {
     top: var(--nav-height);                 /* instead of top: 100% of header */
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--brand-primary);
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    display: none;              /* unchanged: .open will flip it on */
   }
+  .nav-links.open{ display: flex; }
 }
 
 /* Hash links (#about etc.) shouldn't hide under fixed nav */
