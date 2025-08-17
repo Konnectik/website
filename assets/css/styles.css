@@ -20,9 +20,6 @@
   --space-4: 20px;
   --space-5: 24px;
   --space-6: 32px;
-
-  /* nav size */
-  --nav-height: 64px; /* for sticky header */
 }
 
 /* Base */
@@ -44,11 +41,6 @@ body {
 }
 main {flex: 1; }
 
-/* Hash links (#about etc.) shouldn't hide under fixed nav */
-main section[id] {
-  scroll-margin-top: calc(var(--nav-height) + 12px);
-}
-
 /* Skip link */
 .skip-link { position: absolute; left: -9999px; top: auto; }
 .skip-link:focus {
@@ -58,22 +50,13 @@ main section[id] {
 
 /* Header / Nav */
 header {
-  position: sticky; top: 0; left: 0; right: 0; 
-  height: var(--nav-height); z-index: 100;
+  position: sticky; top: 0; z-index: 100;
   background: var(--brand-primary); color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
-header.scrolled {
-  background: 0 6px 20px rgba(0,0,0,0.16); /* slightly transparent on scroll */
-  backdrop-filter: saturate(1.1) blur(4px); /* subtle blur effect */
-}
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  gap: var(--space-3); padding: 0px 20px; max-width: 1100px; margin: 0 auto;
-  height: 100%;
-}
-.nav-spacer {
-  height: var(--nav-height); /* prevents content from sliding under */
+  gap: var(--space-3); padding: 14px 20px; max-width: 1100px; margin: 0 auto;
 }
 .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
 .logo img { height: 40px; width: auto; display: block; }
@@ -102,7 +85,7 @@ header.scrolled {
 }
 @media (max-width: 840px) {
   .nav-links {
-    display: none; position: absolute; top: var(--nav-height); left: 0; right: 0;
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--brand-primary); padding: 12px 20px;
     flex-direction: column; gap: 10px; box-shadow: 0 6px 18px rgba(0,0,0,.12);
   }
@@ -287,3 +270,37 @@ form button:hover { background: #b8201e; }
 
 /* Footer */
 footer { background: #f4f4f4; text-align: center; padding: 20px; font-size: 0.95em; color: var(--muted); }
+
+/* ===== Nav: fixed header + scroll state + safe anchor offsets ===== */
+:root { --nav-height: 64px; }              /* tweak if you change nav sizing */
+
+/* Make header fixed and reserve its space with .nav-spacer */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  z-index: 100;                             /* already present, keep high */
+  background: var(--brand-primary);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.nav { height: 100%; padding: 0 20px; }    /* keep content vertically centered */
+.nav-spacer { height: var(--nav-height); }  /* prevents content from sliding under */
+
+/* Nice visual when scrolled */
+header.scrolled {
+  box-shadow: 0 6px 20px rgba(0,0,0,.16);
+  backdrop-filter: saturate(1.1) blur(4px); /* supported browsers only */
+}
+
+/* Mobile dropdown should open below fixed header */
+@media (max-width: 840px) {
+  .nav-links {
+    top: var(--nav-height);                 /* instead of top: 100% of header */
+  }
+}
+
+/* Hash links (#about etc.) shouldn't hide under fixed nav */
+main section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 12px);
+}

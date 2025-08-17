@@ -163,4 +163,3 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('load', onScroll);
 })();
-
