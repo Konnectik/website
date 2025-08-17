@@ -151,3 +151,16 @@
   enhanceForm('newsletter', 'newsletter-status');
   enhanceForm('contact-form', 'contact-status');
 })();
+
+// Fixed header: add .scrolled after a few pixels (purely visual)
+(() => {
+  const hdr = document.querySelector('header');
+  if (!hdr) return;
+  const onScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    hdr.classList.toggle('scrolled', y > 12);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('load', onScroll);
+})();
+
